@@ -18,7 +18,7 @@ public class Spawner : MonoBehaviour
         if (_time <= 0f) {
             GameObject obj = Instantiate(spawn, _transform.position, _transform.rotation) as GameObject;
             obj.SetActive(true);
-            _time = 0.2f;
+            _time = 0.4f;
         }
         _time -= Time.deltaTime;
 	}
