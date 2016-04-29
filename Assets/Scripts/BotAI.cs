@@ -29,7 +29,6 @@ public class BotAI : MonoBehaviour
             mCurrentBullet.OnBulletHit += Instance_OnBulletHit;
             mCurrentBullet.SetTarget(target.position);
             botAnim.Attack();
-            //Debug.LogFormat("Shoot!!! target: {0}", target.position);
         }
 	}
 

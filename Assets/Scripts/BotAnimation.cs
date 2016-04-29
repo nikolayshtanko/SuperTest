@@ -17,6 +17,7 @@ public class BotAnimation : MonoBehaviour
     public void Attack()
     {
         anim.Play("Attack");
+        Invoke("OnAttackComplete", 1.02f);
     }
 
     public void OnAttackComplete()
