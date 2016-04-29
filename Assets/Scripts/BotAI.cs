@@ -22,7 +22,8 @@ public class BotAI : MonoBehaviour
 	    if (Vector3.Distance(mTransform.position, mTargetTransform.position) < agrDistance && mCurrentBullet == null)
         {
             Vector3 pos = mTransform.localPosition;
-            pos.y += 2;
+            pos.y += 1.3f;
+            pos.x += 0.4f;
             GameObject go = Instantiate(bullet.gameObject, pos, mTransform.rotation) as GameObject;
             mCurrentBullet = go.GetComponent<Bullet>();
             mCurrentBullet.OnBulletHit += Instance_OnBulletHit;

@@ -9,8 +9,6 @@ public class GameController : MonoBehaviour
 
     private static readonly float timeScaleOrigin = 1f;
     private static readonly float fixetDeltaTimeScaleOrigin = 0.02f;
-
-    private Tweener mTweener;
     private bool cameraAnimating = false;
 	
     void Start()
@@ -50,7 +48,7 @@ public class GameController : MonoBehaviour
         if (cameraAnimating == false)
         {
             cameraAnimating = true;
-            mTweener = HOTween.To(effectCamera, 0.2f, new TweenParms().Prop("fieldOfView", to).Ease(EaseType.EaseInCubic).OnComplete(()=> {
+            HOTween.To(effectCamera, 0.2f, new TweenParms().Prop("fieldOfView", to).Ease(EaseType.EaseInCubic).OnComplete(()=> {
                 cameraAnimating = false;
             }));
         }
